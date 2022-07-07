@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/index.png' %}" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/62b00c34e4.js" crossorigin="anonymous"></script>
+    <!-- Primary Meta Tags -->
+    <title>zJairO</title>
+    <meta name="title" content="zJairO">
+    <meta name="description"
+        content="Hola, mi nombre es Jairo soy un ingeniero de software que disfruta el enfoque y la lógica detrás de cada línea de código que escribo.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zjairo.com">
+    <meta property="og:title" content="zJairO">
+    <meta property="og:description"
+        content="Hola, mi nombre es Jairo soy un ingeniero de software que disfruta el enfoque y la lógica detrás de cada línea de código que escribo.">
+    <meta property="og:image" content="{% static 'images/og.png' %}">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zjairo.com">
+    <meta property="twitter:title" content="zJairO">
+    <meta property="twitter:description"
+        content="Hola, mi nombre es Jairo soy un ingeniero de software que disfruta el enfoque y la lógica detrás de cada línea de código que escribo.">
+    <meta property="twitter:image" content="{% static 'images/og.png' %}">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="/">
+                <img src="{% static 'images/index.png' %}" style="width: 60px;"/>
+            </a>
+        </div>
+        <div style="flex: auto;">
+            <a href="/">
+                zJairO
+            </a>
+        </div>
+        <input type="checkbox" id="nav-check">
+        <label for="nav-check" class="nav-toggler">
+            <span></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="{% url 'posts' %}">blog</a></li>
+                <li><a href="{% url 'contact' %}">contact</a></li>
+                <li><a href="{% url 'donate' %}">donate</a></li>
+            </ul>
+        </nav>
+    </header>

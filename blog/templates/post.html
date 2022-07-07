@@ -1,0 +1,9 @@
+{% include 'head_post.html' %}
+{% load markdown_extras %}
+<p style="text-align: center;">
+    <img src="https://zjairo.com/media/{{ post.thumbnail }}" class="images">
+</p>
+<h1 id="TOPIC">{{ post.title }}</h1>
+<p style="text-align: left; color: grey;"><i class="fas fa-calendar" style="color: grey;"></i> {{ post.date|date:"d-m-Y" }}</p>
+{{ post.content | markdown | safe }}
+{% include 'foot.html' %}

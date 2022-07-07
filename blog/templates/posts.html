@@ -1,0 +1,16 @@
+{% include 'head_index.html' %}
+<p>
+    Últimos posts
+</p>
+
+<ul>
+    
+        <!-- <a href="opensmtpd">My OpenSMTPD setup on FreeBSD</a> -->
+        {% for post in object_list %}
+        <li>   
+            <a href="posts/{{ post.slug }}">{{ post.title }}</a>
+        </li> 
+        {% endfor %}
+    </li>
+</ul>
+{% include 'foot.html' %}
